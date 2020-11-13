@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@fbb-km*%9%58%7jva+=9j3a(s&ecxlgfyo4#nsn*2bu5gng&)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['greenatlasco.com','localhost','161.35.105.21']
 
 SITE_ID = 1
 
