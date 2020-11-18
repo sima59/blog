@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
-    #'payment.apps.PaymentConfig',
+   
 ]
 
 MIDDLEWARE = [
@@ -167,33 +167,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # cart
 
 
-#braintree
-#BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
-#BRAINTREE_PUBLIC_KEY = os.getenv('BRAINTREE_PUBLIC_KEY')        # Public Key
-#BRAINTREE_PRIVATE_KEY = os.getenv('BRAINTREE_PRIVATE_KEY')      # Private key
-#BRAINTREE_CONF = braintree.Configuration(
-#    braintree.Environment.Sandbox,
-#    BRAINTREE_MERCHANT_ID,
-#    BRAINTREE_PUBLIC_KEY,
-#    BRAINTREE_PRIVATE_KEY
-#)
-
-#ADMINS = (
- #   (
-  #      os.environ.get('ADMIN_NAME'),
-   #     os.environ.get('ADMIN_EMAIL')
-    #),
-#)
-
-# Braintree settings
-
-# Braintree settings
-BRAINTREE_MERCHANT_ID = ''  # Merchant ID
-BRAINTREE_PUBLIC_KEY = ''   # Public Key
-BRAINTREE_PRIVATE_KEY = ''  # Private key
-
-#import braintree
-
+# braintree
 BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID');     # Merchant ID
 BRAINTREE_PUBLIC_KEY = os.getenv('BRAINTREE_PUBLIC_KEY')        # Public Key
 BRAINTREE_PRIVATE_KEY = os.getenv('BRAINTREE_PRIVATE_KEY')      # Private key
@@ -210,3 +184,4 @@ ADMINS = (
         os.environ.get('ADMIN_EMAIL')
     ),
 )
+
