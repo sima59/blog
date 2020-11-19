@@ -28,20 +28,23 @@
                     </a>
                 </td>
                 <td>{{ product.name }}</td>
+               <!-- <td>{{ item.quantity }}</td>-->
                 <td>
                     <form action="{% url "cart:cart_add" product.id %}" method="post">
                         {{ item.update_quantity_form.quantity }}
                         {{ item.update_quantity_form.override }}
                         <input class="btn btn-primary" type="submit" value="Update">
                         {% csrf_token %}
-                    </form>
+                    </form> 
+                    
                 </td>
                 <td>
                     <form action="{% url "cart:cart_remove" product.id %}" method="post">
                         <input class="btn btn-primary" type="submit" value="Remove">
                         {% csrf_token %}
                     </form>
-                </td>
+                </td> 
+                <!--<td>{{ item.quantity }}</td> -->
                 <td class="num">${{ item.price|intcomma }}</td>
                 <td class="num">${{ item.total_price }}</td>
             </tr>

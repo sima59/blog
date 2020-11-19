@@ -16,8 +16,8 @@ from django.urls import reverse_lazy
 from pathlib import Path
 
 import braintree
-#from dotenv import load_dotenv
-#load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,7 +35,7 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
-#CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,15 +51,16 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
-    'shop.apps.ShopConfig',
     'crispy_forms',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
-   
+    'shop.apps.ShopConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -69,7 +70,7 @@ MIDDLEWARE = [
 ]
 
 
-ROOT_URLCONF = 'myshop.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 
 TEMPLATES = [
@@ -89,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'myshop.wsgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 
